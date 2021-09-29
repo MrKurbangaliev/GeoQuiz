@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">Geo Quiz</string>
+    <string name="earth_icon">Earth icon</string>
+    <string name="machu_picchu_scenery">Machu Picchu Scenery</string>
+    <string name="answer_here">Answer here</string>
+    <string name="question_1">What\'s the name of this place (hint: it\'s in Peru)?</string>
+    <string name="question_2">Who discovered this ancient city in 1911?</string>
+    <string name="francisco_pizarro">Francisco Pizarro</string>
+    <string name="james_cook">James Cook</string>
+    <string name="hiram_bingham">Hiram Bingham</string>
+    <string name="howard_carter">Howard Carter</string>
+    <string name="question_3">What job did the discoverer of this city hold?</string>
+    <string name="governor_of_connecticut">Governor of Connecticut</string>
+    <string name="u_s_senator">U.S. senator</string>
+    <string name="history_professor">History professor</string>
+    <string name="none_of_the_above">None of the above</string>
+    <string name="chakana_description">Chakana, Inca tribe symbol.</string>
+    <string name="question_4">What is the name of a tribe whose symbol depicted below
+        that
+        inhabited this land?</string>
+    <string name="question_5">What was the official language of this tribe?</string>
+    <string name="question_6">Who conquered this ancient empire?</string>
+    <string name="moche">Moche</string>
+    <string name="quechua">Quechua</string>
+    <string name="inka">Inka</string>
+    <string name="wari">Wari</string>
+    <string name="portuguese">Portuguese</string>
+    <string name="spanish">Spanish</string>
+    <string name="all_of_the_above">All of the above</string>
+    <string name="military_stronghold">Military stronghold</string>
+    <string name="royal_retreat">Royal retreat</string>
+    <string name="educational_center">Educational center</string>
+    <string name="question_7">What was the purpose of that ancient city?</string>
+    <string name="submit">Submit</string>
+    <string name="your_results">Your results:</string>
+    <string name="try_again">Try again</string>
+    <string name="explanation_one">This picture was taken in Machu Picchu.</string>
+    <string name="explanation_two">Machu Picchu was unknown to the modern world until 1911, when Hiram Bingham, a Yale history professor, stumbled across its grass-covered terraces and tumbledown walls. The lost city has been almost entirely excavated and reconstructed.</string>
+    <string name="explanation_three">During his lifetime, Hiram Bingham was a Yale professor, military pilot, governor of Connecticut, and U.S. senator. But he will always be remembered as the man who uncovered Machu Picchu.</string>
+    <string name="explanation_four">Depicted Chakana — ancient Inca Empire symbol.</string>
+    <string name="explanation_five">To enable the hundreds of ethnic officials across the empire to communicate, the Inca made their native tongue, Quechua, the state language. But no words were ever recorded. The Inca, like all Andean peoples, lacked a system of writing.</string>
+    <string name="explanation_six">In 1531, Francisco Pizarro, an illiterate Spanish soldier, set sail with 180 men and 37 horses to conquer Peru for its gold. The total subjugation of Peru was accomplished in 1572 and most of the Inca\'s gold and silver treasures had been found and melted down.</string>
+    <string name="explanation_seven">Recent research indicates that rather than being a defensive stronghold, Machu Picchu was a retreat built by and for the Inca ruler Pachacutec. Others have suggested it was built for elites wanting to escape the noise and congestion of the city.</string>
+</resources>

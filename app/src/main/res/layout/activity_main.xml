@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Action Bar. -->
+    <LinearLayout
+        android:id="@+id/top_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:contentDescription="@string/earth_icon"
+            android:scaleType="centerInside"
+            android:src="@drawable/icons8_earth_planet_50" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center_vertical"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:textSize="32sp" />
+    </LinearLayout>
+
+    <!-- Quiz questions. -->
+    <ScrollView
+        android:id="@+id/main_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_app_bar"
+        android:background="@color/colorBackground">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- First question. -->
+            <LinearLayout
+                style="@style/QuestionWindow"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/QuestionText"
+                    android:text="@string/question_1" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/machu_picchu_scenery"
+                    android:src="@drawable/machu_picchu_image" />
+
+                <EditText
+                    android:id="@+id/firstQuestionText"
+                    style="@style/InputText"
+                    android:hint="@string/answer_here"
+                    android:importantForAutofill="no"
+                    android:inputType="textCapWords" />
+
+                <TextView
+                    android:id="@+id/question_one_explanation"
+                    style="@style/explanationText"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/explanation_one"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <!-- Second question. -->
+            <LinearLayout
+                style="@style/QuestionWindow"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/QuestionText"
+                    android:text="@string/question_2" />
+
+                <RadioGroup
+                    android:id="@+id/secondQuestionGroup"
+                    style="@style/GroupsLayout">
+
+                    <RadioButton
+                        android:id="@+id/howard_carter_button"
+                        style="@style/ChoicesLayout"
+                        android:text="@string/howard_carter"
+                        android:onClick="secondQuestionAnswer"/>
+
+                    <RadioButton
+                        android:id="@+id/hiram_bingham_button"
+                        style="@style/ChoicesLayout"
+                        android:text="@string/hiram_bingham"
+                        android:onClick="secondQuestionAnswer"/>
+
+                    <RadioButton
+                        android:id="@+id/james_cook_button"
+                        style="@style/ChoicesLayout"
+                        android:text="@string/james_cook"
+                        android:onClick="secondQuestionAnswer"/>
+
+                    <RadioButton
+                        android:id="@+id/francisco_pizarro_button"
+                        style="@style/ChoicesLayout"
+                        android:text="@string/francisco_pizarro"
+                        android:onClick="secondQuestionAnswer"/>
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/question_two_explanation"
+                    style="@style/explanationText"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/explanation_two"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <!-- Third question. -->
+            <LinearLayout
+                style="@style/QuestionWindow"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/QuestionText"
+                    android:text="@string/question_3" />
+
+                <LinearLayout
+                    style="@style/GroupsLayout">
+
+                    <CheckBox
+                        android:id="@+id/governor_box"
+                        style="@style/ChoicesLayout"
+                        android:text="@string/governor_of_connecticut" />
+
+                    <CheckBox
+                        android:id="@+id/senator_box"
+                        style="@style/ChoicesLayout"
+                        android:text="@string/u_s_senator" />
+
+                    <CheckBox
+                        android:id="@+id/professor_box"
+                        style="@style/ChoicesLayout"
+                        android:text="@string/history_professor" />
+
+                    <CheckBox
+                        android:id="@+id/none_above_box"
+                        style="@style/ChoicesLayout"
+                        android:text="@string/none_of_the_above" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/question_three_explanation"
+                    style="@style/explanationText"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/explanation_three"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <!-- Fourth question. -->
+            <LinearLayout
+                style="@style/QuestionWindow"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/QuestionText"
+                    android:text="@string/question_4" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/chakana_description"
+                    android:src="@drawable/chakana" />
+
+                <EditText
+                    android:id="@+id/fourthQuestionText"
+                    style="@style/InputText"
+                    android:hint="@string/answer_here"
+                    android:importantForAutofill="no"
+                    android:inputType="textCapSentences" />
+
+                <TextView
+                    android:id="@+id/question_four_explanation"
+                    style="@style/explanationText"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/explanation_four"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <!-- Fifth question. -->
+            <LinearLayout
+                style="@style/QuestionWindow"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/QuestionText"
+                    android:text="@string/question_5" />
+
+                <RadioGroup
+                    android:id="@+id/fifthQuestionGroup"
+                    style="@style/GroupsLayout">
+
+                    <RadioButton
+                        android:id="@+id/wari_button"
+                        style="@style/ChoicesLayout"
+                        android:text="@string/wari"
+                        android:onClick="fifthQuestionAnswer" />
+
+                    <RadioButton
+                        android:id="@+id/inka_button"
+                        style="@style/ChoicesLayout"
+                        android:text="@string/inka"
+                        android:onClick="fifthQuestionAnswer" />
+
+                    <RadioButton
+                        android:id="@+id/quechua_button"
+                        style="@style/ChoicesLayout"
+                        android:text="@string/quechua"
+                        android:onClick="fifthQuestionAnswer" />
+
+                    <RadioButton
+                        android:id="@+id/moche_button"
+                        style="@style/ChoicesLayout"
+                        android:text="@string/moche"
+                        android:onClick="fifthQuestionAnswer" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/question_five_explanation"
+                    style="@style/explanationText"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/explanation_five"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <!-- Sixth question. -->
+            <LinearLayout
+                style="@style/QuestionWindow"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/QuestionText"
+                    android:text="@string/question_6" />
+
+                <LinearLayout
+                    style="@style/GroupsLayout">
+
+                    <CheckBox
+                        android:id="@+id/francisco_pizarro_box"
+                        style="@style/ChoicesLayout"
+                        android:text="@string/francisco_pizarro" />
+
+                    <CheckBox
+                        android:id="@+id/moche_box"
+                        style="@style/ChoicesLayout"
+                        android:text="@string/moche" />
+
+                    <CheckBox
+                        android:id="@+id/portuguese_box"
+                        style="@style/ChoicesLayout"
+                        android:text="@string/portuguese" />
+
+                    <CheckBox
+                        android:id="@+id/spanish_box"
+                        style="@style/ChoicesLayout"
+                        android:text="@string/spanish" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/question_six_explanation"
+                    style="@style/explanationText"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/explanation_six"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <!-- Seventh question.-->
+            <LinearLayout
+                style="@style/QuestionWindow"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/QuestionText"
+                    android:text="@string/question_7" />
+
+                <RadioGroup
+                    android:id="@+id/seventhQuestionGroup"
+                    style="@style/GroupsLayout">
+
+                    <RadioButton
+                        android:id="@+id/educational_center_button"
+                        style="@style/ChoicesLayout"
+                        android:text="@string/educational_center"
+                        android:onClick="seventhQuestionAnswer"/>
+
+                    <RadioButton
+                        android:id="@+id/royal_retreat_button"
+                        style="@style/ChoicesLayout"
+                        android:text="@string/royal_retreat"
+                        android:onClick="seventhQuestionAnswer"/>
+
+                    <RadioButton
+                        android:id="@+id/military_stronghold_button"
+                        style="@style/ChoicesLayout"
+                        android:text="@string/military_stronghold"
+                        android:onClick="seventhQuestionAnswer"/>
+
+                    <RadioButton
+                        android:id="@+id/all_above_button"
+                        style="@style/ChoicesLayout"
+                        android:text="@string/all_of_the_above"
+                        android:onClick="seventhQuestionAnswer"/>
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/question_seven_explanation"
+                    style="@style/explanationText"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/explanation_seven"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <!-- Submit button and Try again button (appears after submit is pressed). -->
+
+            <Button
+                android:id="@+id/submit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="75dp"
+                android:layout_marginBottom="75dp"
+                android:onClick="submitAnswers"
+                android:text="@string/submit"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/try_again_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="75dp"
+                android:layout_marginBottom="75dp"
+                android:onClick="resetQuiz"
+                android:text="@string/try_again"
+                android:textAllCaps="false"
+                android:textSize="22sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
